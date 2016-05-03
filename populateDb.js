@@ -5,14 +5,14 @@ var sqlite3 = require("sqlite3").verbose();
 var db = new sqlite3.Database(file);
 
 db.serialize(function() {
-	if(!exists) {
+	//if(!exists) {
 		db.run("CREATE TABLE Posts (" +
 		 "id INTEGER PRIMARY KEY AUTOINCREMENT," + 
 		 "title TEXT,"+
 		 "author TEXT,"+
 		 "body TEXT,"+
 		 "date TEXT)");
-		}
+//		}
 
 	for (var i = 0; i < 5; i++) {
 		var stmt = db.prepare("INSERT INTO Posts (title, author, body, date) VALUES (?, ?, ?, ?)");
