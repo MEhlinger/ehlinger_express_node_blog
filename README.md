@@ -31,14 +31,23 @@ First, install node: [Node](http://nodejs.org)
 
 and [NPM](https://www.npmjs.com/) while you're at it.
 
+Download this directory by cloning or downloading a zipped version.
 
-Clone it and runn app.js:
+Now `cd` into the directory and run:
+
+`$ npm install`
+
+Use Node to run app.js:
 
 `$ node app.js`
 
 Run populateDb.js if you want to reset the database:
 
 `$ node populateDb.js`
+
+If there is not a file named `posts.db`, create it as an empty file:
+
+`$ touch posts.db` 
 
 Navigate to `127.0.0.1:3000` in your browser. You should see the home screen,
 with a few boring posts and links to other parts of the application. 
